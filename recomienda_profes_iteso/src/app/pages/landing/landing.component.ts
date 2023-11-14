@@ -11,7 +11,7 @@ import { gsap } from 'gsap';
 })
 export class LandingComponent implements OnInit {
   isAnimation(): void {
-    document.querySelectorAll('.card').forEach((card) => {
+    document.querySelectorAll('.card:not(.behind-2)').forEach((card) => {
       const cardScroll = gsap.timeline({
         scrollTrigger: {
           trigger: card,
@@ -23,6 +23,20 @@ export class LandingComponent implements OnInit {
       });
       cardScroll.from(card, { duration: 0.5, translateY: 50, opacity: 0 });
       cardScroll.to(card, { duration: 0.5, translateY: 0, opacity: 1 });
+    });
+
+    const specialCard = gsap.timeline({
+      scrollTrigger: {
+        trigger: document.querySelector('.behind-2'),
+        start: 'center 60%',
+        end: 'bottom 50%',
+        markers: false,
+        toggleActions: 'play play none reverse',
+      },
+    });
+    specialCard.from(document.querySelector('.behind-2'), {
+      opacity: 0,
+      y: -100,
     });
 
     const headerSection = document.querySelector('.end-section');

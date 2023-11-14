@@ -6,6 +6,11 @@ $card-bg-color: #191919;
     width: 80%;
 }
 
+@mixin card-behind {
+    position: absolute;
+    max-width: 373px;
+}
+
 .content {
     background-color: #000;
     background-image: url("../../../assets/cool-background.png");
@@ -118,6 +123,28 @@ nav {
         border-radius: 10px;
         min-height: 250px;
         max-height: 250px;
+        z-index: 10;
+    }
+
+    .behind-1 {
+        @include card-behind;
+
+        z-index: 0;
+        top: 0;
+        left: 300px;
+        transform: scale(0.4);
+        filter: blur(2px);
+    }
+
+    .behind-2 {
+        @include card-behind;
+
+        z-index: 0;
+        top: -100px;
+        right: 200px;
+        max-width: 373px;
+        transform: scale(0.5);
+        filter: blur(1px);
     }
 
     .second-card-comment {
@@ -137,7 +164,7 @@ nav {
 
         top: 150px;
         left: -65px;
-        z-index: 10;
+        z-index: 11;
 
         .card-image {
             flex: 1 1 0;
