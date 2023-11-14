@@ -1,0 +1,56 @@
+$primary-color: #284B63;
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0F1D26;
+    color: #fff;
+    padding: 0.5rem 0;
+
+    img {
+        max-height: 100px;
+    }
+
+    form {
+        .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            input {
+                width: 300px;
+                border-radius: 10px;
+                padding: 0.75rem 1rem;
+                border: 1px solid $primary-color;
+            }
+
+            mat-icon {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    a.add-comment-btn {
+        padding: 1rem;
+        border-radius: 50%;
+
+        background-color: #156396;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /** Use this rule if the tag has a parent with specific height */
+        height: 100%;
+        border: 3px solid transparent;
+        transition: all 100ms ease-out 100ms;
+
+        &:hover {
+            background-color: #e6e6e6;
+            color: #156396;
+            border: 3px solid #156396;
+        }
+    }
+}
