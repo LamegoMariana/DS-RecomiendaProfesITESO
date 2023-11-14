@@ -8,9 +8,11 @@ import { MaterialModule } from './modules/material/material.module';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CardComponent } from './utils/card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, LandingComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, LandingComponent, HomeComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
