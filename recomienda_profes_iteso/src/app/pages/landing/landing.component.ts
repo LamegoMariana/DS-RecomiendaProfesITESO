@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit {
           trigger: card,
           start: 'center bottom',
           end: 'bottom bottom',
-          markers: true,
+          markers: false,
           toggleActions: 'play play none reverse',
         },
       });
