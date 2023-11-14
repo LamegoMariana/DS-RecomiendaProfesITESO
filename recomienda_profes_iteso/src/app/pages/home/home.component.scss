@@ -27,12 +27,10 @@ $primary-color: #284B63;
     }
 
     .teachers-grid {
-        margin-top: 3rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 5rem;
-        row-gap: 2rem;
-
-
     }
 }
