@@ -12,10 +12,19 @@
       <h2>¡Bienvenido!</h2>
     </div>
 
-    <form>
+    <form #signUp="ngForm" (ngSubmit)="submitForm(signUp)">
       <div class="form-group">
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" placeholder="Ingresa tu correo" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Ingresa tu correo"
+          required
+          ngModel
+          #email="ngModel"
+          class="form-control"
+        />
         <p>Correo electrónico</p>
       </div>
       <div class="form-group">
@@ -23,7 +32,11 @@
         <input
           type="password"
           id="password"
+          name="password"
           placeholder="Ingresa tu contraseña"
+          required
+          ngModel
+          #password="ngModel"
         />
         <p>Contraseña</p>
       </div>
@@ -32,12 +45,16 @@
         <input
           type="password"
           id="password_confirm"
+          name="password_confirm"
           placeholder="Ingresa tu contraseña"
+          required
+          ngModel
+          #passwordConfirmation="ngModel"
         />
         <p>Confirmar contraseña</p>
       </div>
 
-      <button type="submit">Crear</button>
+      <button [disabled]="!signUp.valid" type="submit">Crear</button>
     </form>
     <div class="divider">
       <div class="left-line"></div>
@@ -47,8 +64,7 @@
 
     <div class="sign-up-text">
       <p>¿Ya tienes una cuenta?</p>
-      <a href="#" id="sign-up">Iniciar sesión</a>
-      <a href="#" id="privacidad">Aviso de privacidad</a>
+      <a [routerLink]="'/login'" id="sign-up">Iniciar sesión</a>
     </div>
   </div>
 </section>

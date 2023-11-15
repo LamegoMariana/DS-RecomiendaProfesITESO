@@ -86,6 +86,10 @@ $primary-color: #284B63;
                 border: none;
                 border-radius: 10px;
                 align-self: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 
@@ -128,6 +132,10 @@ $primary-color: #284B63;
                 margin-top: 0.5rem;
                 color: #000;
 
+                &:hover {
+                    text-decoration: underline;
+                }
+
                 &:visited {
                     color: #000;
                 }
@@ -135,14 +143,6 @@ $primary-color: #284B63;
                 &#sign-up {
                     font-weight: 700;
                     font-size: 1.25rem;
-                }
-
-                &#privacidad {
-                    font-weight: 300;
-                    font-size: 1rem;
-                    text-decoration: underline;
-                    color: $light-gray;
-                    margin-top: 1rem;
                 }
 
             }

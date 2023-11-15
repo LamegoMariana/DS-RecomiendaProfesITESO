@@ -49,7 +49,7 @@ export class LandingComponent implements OnInit {
         toggleActions: 'play play none reverse',
       },
     });
-    headerScroll.from(headerSection, { opacity: 0, y: -100 });
+    headerScroll.from(headerSection, { opacity: 0, y: 100 });
 
     const picturesSection = document.querySelector('.pictures');
     const picturesSectionScroll = gsap.timeline({
