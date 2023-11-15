@@ -1,0 +1,70 @@
+<section id="login-section">
+  <div class="left-side">
+    <img
+      src="https://images.unsplash.com/photo-1600195077077-7c815f540a3d?q=80&w=3089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="studying"
+    />
+  </div>
+
+  <div class="right-side">
+    <div class="title-text">
+      <h1>Crear una cuenta</h1>
+      <h2>¡Bienvenido!</h2>
+    </div>
+
+    <form #signUp="ngForm" (ngSubmit)="submitForm(signUp)">
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Ingresa tu correo"
+          required
+          ngModel
+          #email="ngModel"
+          class="form-control"
+        />
+        <p>Correo electrónico</p>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Ingresa tu contraseña"
+          required
+          ngModel
+          #password="ngModel"
+        />
+        <p>Contraseña</p>
+      </div>
+      <div class="form-group">
+        <label for="password_confirm">Confirmar contraseña:</label>
+        <input
+          type="password"
+          id="password_confirm"
+          name="password_confirm"
+          placeholder="Ingresa tu contraseña"
+          required
+          ngModel
+          #passwordConfirmation="ngModel"
+        />
+        <p>Confirmar contraseña</p>
+      </div>
+
+      <button [disabled]="!signUp.valid" type="submit">Crear</button>
+    </form>
+    <div class="divider">
+      <div class="left-line"></div>
+      <div class="circle"></div>
+      <div class="right-line"></div>
+    </div>
+
+    <div class="sign-up-text">
+      <p>¿Ya tienes una cuenta?</p>
+      <a [routerLink]="'/login'" id="sign-up">Iniciar sesión</a>
+    </div>
+  </div>
+</section>
