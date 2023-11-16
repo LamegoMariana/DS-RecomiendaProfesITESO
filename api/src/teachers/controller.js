@@ -9,7 +9,24 @@ class TeachersController {
 
 			res.status(200).json(teachers);
 		} catch (err) {
-			res.status(400).json({ msg: err });
+			res.status(500).json({ msg: err });
+		}
+	}
+
+	async create(req, res) {
+		try {
+			console.log(req.body);
+			console.log(req.params);
+			let newTeacher = new teacherSchema({
+				name: req.body.name,
+				score: 0,
+				subjects: [],
+			});
+			await newTeacher.save();
+
+			res.json(newTeacher);
+		} catch (err) {
+			res.status(500).json({ msg: err });
 		}
 	}
 }

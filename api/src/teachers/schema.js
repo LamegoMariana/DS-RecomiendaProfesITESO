@@ -7,6 +7,16 @@ const TeacherSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	score: {
+		type: Number,
+		required: true,
+		default: 0,
+	},
+	subjects: {
+		type: Array,
+		required: true,
+		default: [],
+	},
 });
 
 module.exports = mongoose.model('teachers', TeacherSchema);
