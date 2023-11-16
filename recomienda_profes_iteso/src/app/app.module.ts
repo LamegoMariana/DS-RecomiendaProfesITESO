@@ -17,6 +17,8 @@ import { ProfessorComponent } from './pages/professor/professor.component';
 import { MatCardModule } from '@angular/material/card';
 import { MateriasComponent } from './pages/materias/materias.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { MatDividerModule } from '@angular/material/divider';
     FormsModule,
     MatCardModule,
     MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
