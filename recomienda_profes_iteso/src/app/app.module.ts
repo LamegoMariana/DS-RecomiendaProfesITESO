@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MaterialModule } from './modules/material/material.module';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
@@ -44,6 +45,7 @@ import { MatIconModule } from '@angular/material/icon';
     NoopAnimationsModule,
     MaterialModule,
     FormsModule,
+    HttpClientModule,
     MatCardModule,
     MatDividerModule,
     MatFormFieldModule,
@@ -54,4 +56,4 @@ import { MatIconModule } from '@angular/material/icon';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

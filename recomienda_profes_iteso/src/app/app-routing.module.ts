@@ -13,8 +13,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sign_up', component: SignUpComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'professor', component: ProfessorComponent },
   { path: 'subject', component: MateriasComponent },
+  { path: 'teachers/:id', component: ProfessorComponent },
+  { path: '**', redirectTo: 'home' },
   { path: 'recommendation', component: RecommendationComponent },
 ];
 
