@@ -16,6 +16,8 @@
     <app-card
       *ngFor="let teacher of this.teachers$ | async"
       [name]="teacher.name"
+      [score]="teacher.score"
+      [id]="teacher.id"
     ></app-card>
   </div>
 </div>

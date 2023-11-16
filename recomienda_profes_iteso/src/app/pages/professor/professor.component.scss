@@ -8,6 +8,10 @@ $primary-color: #284B63;
         background-color: transparent;
         border: none;
         outline: none;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     p {

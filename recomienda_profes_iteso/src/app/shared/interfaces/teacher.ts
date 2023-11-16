@@ -1,5 +1,6 @@
 export interface Teacher {
+  id: string;
   name: string;
-  score: Number;
+  score: number;
   subjects: any[];
 }

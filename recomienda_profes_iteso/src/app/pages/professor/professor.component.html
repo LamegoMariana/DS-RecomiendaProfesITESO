@@ -1,128 +1,132 @@
 <app-navbar></app-navbar>
 
 <div class="content">
-    <button mat-icon-button (click)="goBack()">
-        <mat-icon>keyboard_backspace</mat-icon>
-    </button>
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>keyboard_backspace</mat-icon>
+  </button>
 
-    <div class="banner-content">
-        <div class="banner">
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>John Doe</mat-card-title>
-                    <mat-card-subtitle class="stars-content">
-                        <p>Calificación</p>
-                        <div class="stars">
-                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
-                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
-                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
-                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
-                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
-                        </div>
-                    </mat-card-subtitle>
-                    <div class="card-avatar" style="margin-left: auto;">
-                        <svg viewBox="0 0 36 36" fill="none" role="img" xmlns="http://www.w3.org/2000/svg" width="80"
-                            height="80">
-                            <mask id=":r7:" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
-                                <rect width="36" height="36" fill="#FFFFFF" rx="72"></rect>
-                            </mask>
-                            <g mask="url(#:r7:)">
-                                <rect width="36" height="36" fill="#ffbc85"></rect>
-                                <rect x="0" y="0" width="36" height="36"
-                                    transform="translate(4 4) rotate(340 18 18) scale(1.1)" fill="#dfb5fb" rx="36">
-                                </rect>
-                                <g transform="translate(-4 -1) rotate(0 18 18)">
-                                    <path d="M15 20c2 1 4 1 6 0" stroke="#000000" fill="none" stroke-linecap="round">
-                                    </path>
-                                    <rect x="14" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#000000">
-                                    </rect>
-                                    <rect x="20" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#000000">
-                                    </rect>
-                                </g>
-                            </g>
-                        </svg>
-                    </div>
-                </mat-card-header>
+  <div class="banner-content">
+    <div class="banner" *ngIf="teacher$ | async as teacher">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ teacher.name }}</mat-card-title>
+          <mat-card-subtitle class="stars-content">
+            <p>Calificación {{ teacher.score }}</p>
+          </mat-card-subtitle>
+          <div class="card-avatar" style="margin-left: auto">
+            <svg
+              viewBox="0 0 36 36"
+              fill="none"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+            >
+              <mask
+                id=":r7:"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="36"
+                height="36"
+              >
+                <rect width="36" height="36" fill="#FFFFFF" rx="72"></rect>
+              </mask>
+              <g mask="url(#:r7:)">
+                <rect width="36" height="36" fill="#ffbc85"></rect>
+                <rect
+                  x="0"
+                  y="0"
+                  width="36"
+                  height="36"
+                  transform="translate(4 4) rotate(340 18 18) scale(1.1)"
+                  fill="#dfb5fb"
+                  rx="36"
+                ></rect>
+                <g transform="translate(-4 -1) rotate(0 18 18)">
+                  <path
+                    d="M15 20c2 1 4 1 6 0"
+                    stroke="#000000"
+                    fill="none"
+                    stroke-linecap="round"
+                  ></path>
+                  <rect
+                    x="14"
+                    y="14"
+                    width="1.5"
+                    height="2"
+                    rx="1"
+                    stroke="none"
+                    fill="#000000"
+                  ></rect>
+                  <rect
+                    x="20"
+                    y="14"
+                    width="1.5"
+                    height="2"
+                    rx="1"
+                    stroke="none"
+                    fill="#000000"
+                  ></rect>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </mat-card-header>
 
-                <mat-card-content>
-                    <div class="subjects-grid">
-                        <mat-card class="card" [routerLink]="'/subject'">
-                            <mat-card-header>
-                                <mat-card-title>Materia</mat-card-title>
-                                <mat-card-subtitle class="stars-content">
-                                    <p>Calificación</p>
-                                    <div class="stars">
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                    </div>
-                                </mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <img mat-card-image src="../../../assets/materia1.png" alt="Photo of restaurant 1" />
-                            </mat-card-content>
-                        </mat-card>
-
-                        <mat-card class="card" [routerLink]="'/subject'">
-                            <mat-card-header>
-                                <mat-card-title>Materia</mat-card-title>
-                                <mat-card-subtitle class="stars-content">
-                                    <p>Calificación</p>
-                                    <div class="stars">
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                    </div>
-                                </mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <img mat-card-image src="../../../assets/materia2.png" alt="Photo of restaurant 1" />
-                            </mat-card-content>
-                        </mat-card>
-
-                        <mat-card class="card" [routerLink]="'/subject'">
-                            <mat-card-header>
-                                <mat-card-title>Materia</mat-card-title>
-                                <mat-card-subtitle class="stars-content">
-                                    <p>Calificación</p>
-                                    <div class="stars">
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                        <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                            fontIcon="star"></mat-icon>
-                                    </div>
-                                </mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <img mat-card-image src="../../../assets/materia3.png" alt="Photo of restaurant 1" />
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                </mat-card-content>
+        <mat-card-content>
+          <div class="subjects-grid">
+            <mat-card
+              class="card"
+              [routerLink]="'/subject'"
+              *ngFor="let subject of teacher.subjects"
+            >
+              <mat-card-header>
+                <mat-card-title>{{ subject.name }}</mat-card-title>
+                <mat-card-subtitle class="stars-content">
+                  <p>Calificación</p>
+                  <div class="stars">
+                    <mat-icon
+                      aria-hidden="false"
+                      aria-label="Example home icon"
+                      fontIcon="star"
+                    ></mat-icon>
+                    <mat-icon
+                      aria-hidden="false"
+                      aria-label="Example home icon"
+                      fontIcon="star"
+                    ></mat-icon>
+                    <mat-icon
+                      aria-hidden="false"
+                      aria-label="Example home icon"
+                      fontIcon="star"
+                    ></mat-icon>
+                    <mat-icon
+                      aria-hidden="false"
+                      aria-label="Example home icon"
+                      fontIcon="star"
+                    ></mat-icon>
+                    <mat-icon
+                      aria-hidden="false"
+                      aria-label="Example home icon"
+                      fontIcon="star"
+                    ></mat-icon>
+                  </div>
+                </mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <img
+                  mat-card-image
+                  src="../../../assets/materia1.png"
+                  alt="Photo of restaurant 1"
+                />
+              </mat-card-content>
             </mat-card>
-        </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
-
+  </div>
 </div>
 
 <app-footer></app-footer>

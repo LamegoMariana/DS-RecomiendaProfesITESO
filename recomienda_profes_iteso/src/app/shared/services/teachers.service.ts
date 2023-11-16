@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Teacher } from '../interfaces/teacher';
 
 @Injectable({
@@ -13,5 +13,10 @@ export class TeachersService {
 
   getTeachers(): Observable<Teacher[]> {
     return this.http.get<Teacher[]>(this.teachersUrl);
+  }
+
+  getTeacher(teacherID: string): Observable<Teacher> {
+    const newUrl = this.teachersUrl + `/${teacherID}`;
+    return this.http.get<Teacher>(newUrl);
   }
 }

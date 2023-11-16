@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'sign_up', component: SignUpComponent },
   { path: 'home', component: HomeComponent },
   { path: 'subject', component: MateriasComponent },
-  { path: 'profesor', component: ProfessorComponent },
+  { path: 'teachers/:id', component: ProfessorComponent },
   { path: '**', redirectTo: 'home' },
 ];
 
