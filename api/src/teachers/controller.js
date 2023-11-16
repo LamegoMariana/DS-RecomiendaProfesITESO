@@ -37,6 +37,12 @@ class TeachersController {
 
 			// Assign the id field with the string version of _id
 			teacher.id = teacher._id.toString();
+			teacher.subjects = teacher.subjects.map((item) => ({
+				...item,
+				id: item._id.toString(), // Convert ObjectId to string
+			}));
+
+			console.log(teacher);
 
 			res.status(200).json(teacher);
 		} catch (err) {

@@ -9,58 +9,24 @@ $primary-color: #284B63;
         border: none;
         outline: none;
 
+        mat-icon {
+            font-size: 2rem;
+        }
+
         &:hover {
             cursor: pointer;
         }
     }
 
-    p {
-        font-size: 1rem;
-    }
 
-    h1 {
-        font-weight: 700;
-        font-size: 2rem;
-        padding-left: 1rem;
-    }
-
-    .grid {
+    .teacher-info {
+        margin-top: 2rem;
         display: flex;
-        gap: 3rem;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        &>* {
-            flex: 1 1 0px;
-        }
-    }
-
-    .banner {
-        .mat-card-title {
-            font-size: 36px;
-        }
-    }
-
-    .card {
-        max-width: 400px;
-
-        mat-card-header,
-        mat-card-content {
-            padding: 1rem;
-        }
-
-        img {
-            height: 130px;
-            border-radius: 20px;
-            display: block;
-            margin: auto;
-        }
+        align-items: center;
+        justify-content: space-between;
     }
 
     .stars-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 0.75rem;
 
         p {
@@ -69,18 +35,22 @@ $primary-color: #284B63;
 
         .stars {
             color: #c1c1c1;
+
+            .filled {
+                color: $primary-color;
+            }
         }
 
-        .stars>mat-icon:nth-child(-n+3) {
-            color: $primary-color;
-        }
     }
 
-    .subjects-grid {
+    .teachers-grid {
         margin-top: 5rem;
         margin-bottom: 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 5rem;
+
+
     }
+
 }
