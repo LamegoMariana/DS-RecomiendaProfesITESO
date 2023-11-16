@@ -14,6 +14,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardComponent } from './utils/card/card.component';
 import { NavbarComponent } from './utils/navbar/navbar.component';
 import { FooterComponent } from './utils/footer/footer.component';
+import { ProfessorComponent } from './pages/professor/professor.component';
+import { MatCardModule } from '@angular/material/card';
+import { MateriasComponent } from './pages/materias/materias.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,8 @@ import { FooterComponent } from './utils/footer/footer.component';
     CardComponent,
     NavbarComponent,
     FooterComponent,
+    ProfessorComponent,
+    MateriasComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,8 @@ import { FooterComponent } from './utils/footer/footer.component';
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
