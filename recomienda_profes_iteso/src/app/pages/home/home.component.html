@@ -13,8 +13,10 @@
   </div>
 
   <div class="teachers-grid">
-    <!-- TODO: Obviamente cambiar esto -->
-    <app-card *ngFor="let x of [1, 2, 3, 4, 5, 6]"></app-card>
+    <app-card
+      *ngFor="let teacher of this.teachers$ | async"
+      [name]="teacher.name"
+    ></app-card>
   </div>
 </div>
 <app-footer></app-footer>

@@ -7,8 +7,8 @@ const port = process.env.PORT || 3000;
 app.use('/', express.json());
 
 const { apiRoutes } = require('./src');
-const server = app.listen(port, () => {
-	console.log(`http://localhost:${port}/`);
+app.listen(port, () => {
+	console.log(`App running on: http://localhost:${port}/`);
 });
 
 app.use('/test/:id', (req, res) => {
@@ -25,9 +25,9 @@ app.use('', apiRoutes);
 const databaseModule = require('./database');
 databaseModule
 	.connect()
-	.then((client) => {
-		databaseModule.setDB(client.db(process.env.DB_NAME));
+	.then(() => {
+		console.log('> DATABASE CONNECTED SUCCESSFULLY');
 	})
 	.catch((err) => {
-		console.log('Database connection error  - database/connect.js', err);
+		console.error('Database connection error  - database/connect.js', err);
 	});
