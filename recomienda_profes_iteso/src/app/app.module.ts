@@ -18,6 +18,12 @@ import { ProfessorComponent } from './pages/professor/professor.component';
 import { MatCardModule } from '@angular/material/card';
 import { MateriasComponent } from './pages/materias/materias.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { RecommendationComponent } from './pages/recommendation/recommendation.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +37,7 @@ import { MatDividerModule } from '@angular/material/divider';
     FooterComponent,
     ProfessorComponent,
     MateriasComponent,
+    RecommendationComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +48,10 @@ import { MatDividerModule } from '@angular/material/divider';
     HttpClientModule,
     MatCardModule,
     MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

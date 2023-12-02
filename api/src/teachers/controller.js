@@ -42,8 +42,6 @@ class TeachersController {
 				id: item._id.toString(), // Convert ObjectId to string
 			}));
 
-			console.log(teacher);
-
 			res.status(200).json(teacher);
 		} catch (err) {
 			// Log the error for debugging purposes
@@ -54,8 +52,6 @@ class TeachersController {
 
 	async create(req, res) {
 		try {
-			console.log(req.body);
-			console.log(req.params);
 			let newTeacher = new teacherSchema({
 				name: req.body.name,
 				score: 0,

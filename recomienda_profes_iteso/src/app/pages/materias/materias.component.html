@@ -1,2 +1,144 @@
 <app-navbar></app-navbar>
+
+<div class="content">
+    <button mat-icon-button (click)="goBack()">
+        <mat-icon>keyboard_backspace</mat-icon>
+    </button>
+
+    <div class="banner-content">
+        <div class="banner">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>John Doe</mat-card-title>
+                    <mat-card-title>Materia</mat-card-title>
+
+                    <mat-card-subtitle class="stars-content">
+                        <p>Calificación</p>
+                        <div class="stars">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+                        </div>
+                    </mat-card-subtitle>
+                    <div class="card-avatar" style="margin-left: auto;">
+                        <svg viewBox="0 0 36 36" fill="none" role="img" xmlns="http://www.w3.org/2000/svg" width="80"
+                            height="80">
+                            <mask id=":r7:" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+                                <rect width="36" height="36" fill="#FFFFFF" rx="72"></rect>
+                            </mask>
+                            <g mask="url(#:r7:)">
+                                <rect width="36" height="36" fill="#ffbc85"></rect>
+                                <rect x="0" y="0" width="36" height="36"
+                                    transform="translate(4 4) rotate(340 18 18) scale(1.1)" fill="#dfb5fb" rx="36">
+                                </rect>
+                                <g transform="translate(-4 -1) rotate(0 18 18)">
+                                    <path d="M15 20c2 1 4 1 6 0" stroke="#000000" fill="none" stroke-linecap="round">
+                                    </path>
+                                    <rect x="14" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#000000">
+                                    </rect>
+                                    <rect x="20" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#000000">
+                                    </rect>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </mat-card-header>
+
+
+                <mat-card-content>
+                    <div class="comments-grid">
+
+                        <mat-form-field appearance="fill">
+                            <mat-icon matPrefix fontIcon="add"></mat-icon>
+                            <input matInput placeholder="Deja un comentario constructivo..." class="custom-input">
+                        </mat-form-field>
+                    </div>
+
+                    <mat-divider></mat-divider>
+
+                    <mat-card class="comment-card">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+
+                            <mat-card-title>&#64;albertooo</mat-card-title>
+                            <mat-card-subtitle>Hace 3 días</mat-card-subtitle>
+
+                            <!-- Votos a favor (corazón) -->
+                            <button mat-icon-button style="margin-left: auto;" class="icon-container"
+                                (click)="toggleLike()" [class.liked]="isLiked">
+                                <mat-icon aria-label="Votos a Favor"
+                                    [style.color]="isLiked ? 'red' : 'black'">favorite</mat-icon>
+                                <span>10</span> <!-- Número de votos a favor -->
+                            </button>
+
+                            <!-- Votos en contra (carita triste) -->
+                            <button mat-icon-button style="margin-right: 3px;">
+                                <mat-icon aria-label="Votos en Contra">sentiment_very_dissatisfied</mat-icon>
+                            </button>
+
+                            <!-- Botón para responder (lápiz) -->
+                            <button mat-icon-button>
+                                <mat-icon aria-label="Responder">edit</mat-icon>
+                            </button>
+                        </mat-card-header>
+
+                        <!-- Contenido del comentario -->
+                        <mat-card-content>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-divider></mat-divider>
+                    <br>
+
+                    <mat-card class="comment-card">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image2"></div>
+
+                            <mat-card-title>&#64;lamegooo</mat-card-title>
+                            <mat-card-subtitle>Hace 3 días</mat-card-subtitle>
+
+                            <!-- Votos a favor (corazón) -->
+                            <button mat-icon-button style="margin-left: auto;" class="icon-container">
+                                <mat-icon aria-label="Votos a Favor">favorite</mat-icon>
+                                <span>10</span> <!-- Número de votos a favor -->
+                            </button>
+
+                            <!-- Votos en contra (carita triste) -->
+                            <button mat-icon-button style="margin-right: 3px;" (click)="toggleDislike()"
+                                [class.liked]="isDisliked">
+                                <mat-icon aria-label="Votos en Contra"
+                                    [style.color]="isDisliked ? 'blue' : 'black'">sentiment_very_dissatisfied</mat-icon>
+                            </button>
+
+                            <!-- Botón para responder (lápiz) -->
+                            <button mat-icon-button>
+                                <mat-icon aria-label="Responder">edit</mat-icon>
+                            </button>
+                        </mat-card-header>
+
+                        <!-- Contenido del comentario -->
+                        <mat-card-content>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </mat-card-content>
+                    </mat-card>
+
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+    </div>
+</div>
+
+
 <app-footer></app-footer>

@@ -6,6 +6,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfessorComponent } from './pages/professor/professor.component';
 import { MateriasComponent } from './pages/materias/materias.component';
+import { RecommendationComponent } from './pages/recommendation/recommendation.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'subject', component: MateriasComponent },
   { path: 'teachers/:id', component: ProfessorComponent },
+  { path: 'recommendation', component: RecommendationComponent },
   { path: '**', redirectTo: 'home' },
 ];
 

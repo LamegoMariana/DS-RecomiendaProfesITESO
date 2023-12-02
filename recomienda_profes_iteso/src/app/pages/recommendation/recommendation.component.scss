@@ -1,0 +1,107 @@
+$primary-color: #284B63;
+
+.content {
+    width: 80%;
+    margin: 2rem auto;
+
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        padding-left: 1rem;
+    }
+
+    .grid {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &>* {
+            flex: 1 1 0px;
+        }
+    }
+
+    .banner {
+        .mat-card-title {
+            font-size: 36px;
+        }
+    }
+
+    .card {
+        max-width: 400px;
+
+        mat-card-header,
+        mat-card-content {
+            padding: 1rem;
+        }
+
+        img {
+            height: 150px;
+            border-radius: 20px;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .recommendation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recommendation>* {
+        width: 100%;
+    }
+
+    .stars {
+        color: $primary-color;
+    }
+
+    mat-card-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button.add {
+            width: 80px;
+            height: 60px;
+            background-color: $primary-color;
+            border-radius: 20%;
+
+            span {
+                color: white;
+            }
+
+        }
+
+    }
+
+    .star-rating {
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .star {
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .star:hover,
+    .star.active {
+        color: $primary-color;
+    }
+
+
+
+}

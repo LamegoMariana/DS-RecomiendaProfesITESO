@@ -1,12 +1,12 @@
 <nav>
-  <img src="assets/logo.png" alt="Logo" />
+  <img src="assets/logo.png" alt="Logo" [routerLink]="'/home'" />
   <form>
     <div class="form-group">
       <input type="text" id="query" placeholder="Busca un profesor o materia" />
       <mat-icon fontIcon="search"></mat-icon>
     </div>
   </form>
-  <a class="add-comment-btn" [routerLink]="'/'">
+  <a class="add-comment-btn" [routerLink]="'/recommendation'">
     <mat-icon fontIcon="add"></mat-icon>
   </a>
 </nav>
