@@ -15,12 +15,12 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'subject', component: MateriasComponent },
   { path: 'teachers/:id', component: ProfessorComponent },
-  { path: '**', redirectTo: 'home' },
   { path: 'recommendation', component: RecommendationComponent },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
