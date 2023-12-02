@@ -1,7 +1,3 @@
-# DS-RecomiendaProfesITESO
-
-Repositorio para el proyecto de la clase Diseño de Software del ITESO 2023: Recomienda Profes ITESO
-
 # Recomienda Profes ITESO
 
 Bienvenido al repositorio del proyecto "Recomienda Profes ITESO". Este proyecto tiene como objetivo proporcionar a los estudiantes del ITESO una plataforma para calificar y dejar comentarios sobre los profesores. A continuación, se presenta una breve descripción y los integrantes del equipo:
