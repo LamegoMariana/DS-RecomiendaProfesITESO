@@ -1,4 +1,5 @@
 # DS-RecomiendaProfesITESO
+
 Repositorio para el proyecto de la clase Diseño de Software del ITESO 2023: Recomienda Profes ITESO
 
 # Recomienda Profes ITESO
@@ -12,6 +13,7 @@ El proyecto "Recomienda Profes ITESO" es una plataforma web diseñada para permi
 ## Integrantes del Equipo
 
 - **Alberto Romano**
+
   - Rol: Diseñador principal y Programador principal.
   - Contribuciones: Encargado del diseño de la interfaz de usuario y líder en el desarrollo del código.
 
@@ -24,9 +26,8 @@ El proyecto "Recomienda Profes ITESO" es una plataforma web diseñada para permi
 A continuación, se presentan las instrucciones básicas para ejecutar el proyecto en un entorno local:
 
 1. Clona el repositorio a tu máquina local.
-2. Instala las dependencias del proyecto utilizando el gestor de paquetes especificado.
-3. Ejecuta el servidor local con el comando `npm start` (o el comando correspondiente).
+2. Necesitarás 2 instancias de tu terminal - Una para la API y otra para la web app (Angular). Crea estas 2 instancias y muévete a cada path pertinente. (./api para la API y ./recomienda_profes_iteso para la web app).
+3. Instala las dependencias del proyecto utilizando el gestor de paquetes especificado (`npm i`).
+4. Ejecuta el servidor local con el comando `npm start` para la API y `ng serve -o` para la Web app.
 
 ¡Gracias por tu interés en nuestro proyecto!
-
-
