@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="content">
+  <div class="banner-content">
+    <div class="banner"></div>
+    <div class="banner-text">
+      <p>
+        Aplica la amabilidad, la justicia y la honestidad en tus
+        recomendaciones.
+      </p>
+      <p>Así todes pueden confiar en sus elecciones.</p>
+    </div>
+  </div>
+
+  <div class="teachers-grid">
+    <app-card
+      *ngFor="let teacher of this.teachers$ | async"
+      [name]="teacher.name"
+      [score]="teacher.score"
+      [id]="teacher.id"
+    ></app-card>
+  </div>
+</div>
+<app-footer></app-footer>
